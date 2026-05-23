@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="OBIRI Restaurant & Lounge — Fine dining, premium Nigerian cuisine, live band nights and cozy outdoor seating in New GRA, Port Harcourt. Reserve a table or order via WhatsApp." />
+    <title>OBIRI Restaurant & Lounge | Fine Dining & Live Entertainment Port Harcourt</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700;800;900&family=Playfair+Display:wght@400;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Lucide Icon font replacement via inline SVGs in JS -->
+     <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+  </head>
+
+  <body>
+
+    <!-- =========================================================
+         TOP MICRO HEADER (Desktop only)
+         ========================================================= -->
+    <div class="top-bar">
+      <div class="top-bar-inner">
+        <div class="top-bar-info">
+          <span class="info-pill"><span class="dot-gold"></span> 111 Woji Road, New GRA, Port Harcourt</span>
+          <span class="info-pill"><span class="dot-gold"></span> 12:00 PM – Late (Daily)</span>
+        </div>
+        <div class="top-bar-actions">
+          <a class="phone-link" href="tel:+2349033173219">📞 +234 903 317 3219</a>
+          <span class="info-badge">★ Dine-In • Drive-Thru • Delivery</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         MAIN HEADER / NAVIGATION
+         ========================================================= -->
+    <header class="header" id="mainHeader">
+      <div class="header-inner">
+        <a href="#home" class="logo">
+          <span class="logo-main">OBIRI</span>
+          <span class="logo-sub">RESTAURANT &amp; LOUNGE</span>
+        </a>
+
+        <nav class="nav-desktop">
+          <a href="#home" class="nav-link active">Home</a>
+          <a href="#about" class="nav-link">About</a>
+          <a href="#menu" class="nav-link">Menu</a>
+          <a href="#events" class="nav-link">Live Events</a>
+          <a href="#reviews" class="nav-link">Reviews</a>
+          <a href="#gallery" class="nav-link">Gallery</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn cart-trigger" id="openCartBtn" aria-label="Open cart">
+            🛒
+            <span class="cart-count" id="cartCountBadge" style="display:none;">0</span>
+          </button>
+          <a href="#reserve" class="btn btn-gold reserve-btn-desk">Reserve Table</a>
+          <button class="icon-btn menu-toggle" id="mobileMenuToggle" aria-label="Open menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Drawer -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <a href="#home" class="logo">
+          <span class="logo-main">OBIRI</span>
+          <span class="logo-sub">RESTAURANT &amp; LOUNGE</span>
+        </a>
+        <button class="icon-btn" id="closeMobileMenu" aria-label="Close menu">✕</button>
+      </div>
+      <nav class="mobile-nav">
+        <a href="#home" class="mobile-link">Home</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#menu" class="mobile-link">Menu</a>
+        <a href="#events" class="mobile-link">Live Events</a>
+        <a href="#reviews" class="mobile-link">Reviews</a>
+        <a href="#gallery" class="mobile-link">Gallery</a>
+        <a href="#contact" class="mobile-link">Contact</a>
+      </nav>
+      <div class="mobile-menu-footer">
+        <a href="#reserve" class="btn btn-gold btn-block">Reserve a Table</a>
+        <a href="tel:+2349033173219" class="btn btn-outline btn-block">📞 Call: +234 903 317 3219</a>
+        <p class="mobile-address">📍 111 Woji Road, New GRA, Port Harcourt</p>
+      </div>
+    </div>
+
+    <!-- =========================================================
+         HERO
+         ========================================================= -->
+    <section id="home" class="hero">
+      <div class="hero-slides" id="heroSlides">
+        <div class="hero-slide active" style="background-image:url('/image/obiri-outdoor-hut.png')"></div>
+        <div class="hero-slide" style="background-image:url('/image/obiri-calabash.png')"></div>
+        <div class="hero-slide" style="background-image:url('/image/obiri-poool.png')"></div>
+      </div>
+
+      <div class="hero-overlay"></div>
+
+      <div class="hero-content">
+        <div class="hero-badges">
+          <span class="badge badge-gold">🎶 Live Band Nights</span>
+          <span class="badge">🌿 Outdoor Seating</span>
+          <span class="badge">🍲 Nigerian Delicacies</span>
+        </div>
+
+        <h1 class="hero-title">
+          Experience <span class="gold-gradient">Fine Dining</span><br>
+          &amp; Live Entertainment
+        </h1>
+        <p class="hero-eyebrow">Located in New GRA, Port Harcourt</p>
+        <p class="hero-subtitle" id="heroSubtitle">
+          Step into Port Harcourt's premier luxury lounge. Rich flavors, handcrafted cocktails, and unforgettable live rhythms await — under our signature thatched garden canopy.
+        </p>
+
+        <div class="hero-buttons">
+          <a href="#reserve" class="btn btn-gold btn-lg">Reserve a Table</a>
+          <a href="#menu" class="btn btn-outline-gold btn-lg">Order via WhatsApp</a>
+        </div>
+      </div>
+
+      <!-- Quick Info Bar -->
+      <div class="quick-info">
+        <div class="quick-info-item">
+          <div class="qi-icon">📍</div>
+          <div>
+            <p class="qi-label">Our Location</p>
+            <p class="qi-value">111 Woji Road, New GRA, Port Harcourt</p>
+          </div>
+        </div>
+        <div class="quick-info-item">
+          <div class="qi-icon">🕒</div>
+          <div>
+            <p class="qi-label">Opening Hours</p>
+            <p class="qi-value">12:00 PM – Late Night (Daily)</p>
+          </div>
+        </div>
+        <div class="quick-info-item">
+          <div class="qi-icon pulse">📞</div>
+          <div class="qi-phone-wrap">
+            <div>
+              <p class="qi-label">Direct Booking Line</p>
+              <a href="tel:+2349033173219" class="qi-value-gold">+234 903 317 3219</a>
+            </div>
+            <a href="tel:+2349033173219" class="btn btn-mini">Call Now</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FAST SERVICE GUARANTEE
+         ========================================================= -->
+    <section class="fast-service">
+      <div class="container fast-grid">
+        <div class="fast-text">
+          <span class="eyebrow gold"><span>🛡️</span> Our Brand Promise</span>
+          <h2 class="section-title">We Value Your Time:<br><span class="gold">Fast Service Guarantee</span></h2>
+          <p class="section-desc">
+            We listened to our customers. To ensure your lounge and fine-dining experience is completely seamless, OBIRI has optimized our kitchen operations, hired dedicated order runners, and updated our prep queues. Enjoy the music without the wait.
+          </p>
+
+          <div class="promise-grid">
+            <div class="promise-card">
+              <span class="check">✓</span>
+              <div>
+                <h4>20-Min Lunch Promise</h4>
+                <p>If your lunch local dish takes more than 20 minutes, your first drink is on the house.</p>
+              </div>
+            </div>
+            <div class="promise-card">
+              <span class="check">✓</span>
+              <div>
+                <h4>15-Min Drive-Thru Pickup</h4>
+                <p>Order ahead on WhatsApp and swing by — hot food handoff in under 15 minutes.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="kitchen-widget">
+          <div class="kw-glow"></div>
+          <div class="kw-head">
+            <div class="kw-live"><span class="dot-live"></span>LIVE KITCHEN STATUS</div>
+            <span class="kw-pill">REFRESHING LIVE</span>
+          </div>
+          <div class="kw-stats">
+            <div>
+              <p class="kw-mini">Current Speed</p>
+              <p class="kw-big" id="kitchenSpeed">14 <span>mins avg</span></p>
+            </div>
+            <div class="kw-right">
+              <p class="kw-mini">Kitchen Load</p>
+              <span class="kw-status" id="kitchenStatus">⚡ Optimal Speed</span>
+            </div>
+          </div>
+          <div class="kw-bar-wrap">
+            <div class="kw-labels"><span>Super Fast</span><span>Standard</span><span>Peak Limit</span></div>
+            <div class="kw-bar"><div class="kw-bar-fill" id="kitchenBar" style="width:56%"></div></div>
+          </div>
+          <div class="kw-info">🔥 Hot plates delivered in insulated thermal packs to keep food fresh.</div>
+          <div class="kw-foot">
+            <div class="kw-foot-l"><span class="kw-foot-icon">⏰</span><div><p class="kw-mini">Order-to-Table</p><p class="kw-foot-strong">Maximum 20 Minutes</p></div></div>
+            <div class="kw-foot-tag">WE VALUE YOUR TIME</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         ABOUT
+         ========================================================= -->
+    <section id="about" class="about">
+      <div class="container about-grid">
+        <div class="about-image-wrap">
+          <img src="/image/obiri-outdoor-hut.png" alt="OBIRI Outdoor Thatched Garden Seating" class="about-image">
+          <div class="about-badge">
+            <p class="ab-title">❤️ A Port Harcourt Icon</p>
+            <p class="ab-desc">Known for bringing luxury, premium Afro-centric menus, and highlife rhythm into New GRA.</p>
+          </div>
+        </div>
+
+        <div class="about-text">
+          <span class="eyebrow gold">About OBIRI</span>
+          <h2 class="section-title">Where Fine Taste Meets <br><span class="gold">Vibrant Highlife Rhythm</span></h2>
+          <p>OBIRI Restaurant & Lounge was established with a singular vision: to create an oasis of culinary excellence and live acoustic music in the heart of Port Harcourt. Inspired by the rich traditions of Nigerian hospitality, we merge local culinary heritage with high-end premium dining.</p>
+          <blockquote>
+            "Our mission is to deliver unforgettable dining experiences through rich, authentic Nigerian flavors and vibrant, soul-stirring entertainment."
+          </blockquote>
+          <p>Whether you are stopping by for a swift lunch, holding a birthday blowout, or lounging over fresh calabashes of palm wine on Live Band Fridays, we ensure every moment is crafted to perfection.</p>
+
+          <div class="about-stats">
+            <div><p class="stat-num">4.1 ★</p><p class="stat-label">Average Rating</p></div>
+            <div><p class="stat-num">139+</p><p class="stat-label">Google Reviews</p></div>
+            <div><p class="stat-num">100%</p><p class="stat-label">Nigerian Hospitality</p></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container pillars">
+        <div class="pillar">
+          <div class="pillar-icon">☕</div>
+          <h3>Cozy Lounge Comfort</h3>
+          <p>Lush velvet seating, warm low-profile lighting, and intimate corners that make you feel at home.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">✨</div>
+          <h3>Elegant Fine Dining</h3>
+          <p>Every detail, from the gold-gilded cutlery to premium glassware, ensures a sophisticated experience.</p>
+        </div>
+        <div class="pillar">
+          <div class="pillar-icon">👥</div>
+          <h3>Social & Vibrant Nights</h3>
+          <p>Perfect for group meetups, birthdays, and weekend lounge turn-ups with live musicians and energetic vibes.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         MENU
+         ========================================================= -->
+    <section id="menu" class="menu-section">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow gold">Mouthwatering Choices</span>
+          <h2 class="section-title">Explore Our Culinary Menu</h2>
+          <div class="gold-line"></div>
+          <p class="section-desc-center">
+            Experience traditional recipes, premium wild cuts, and handcrafted drinks. Filter below or order directly via WhatsApp.
+          </p>
+        </div>
+
+        <div class="menu-controls">
+          <div class="menu-tabs" id="menuTabs">
+            <button class="menu-tab active" data-cat="all">All Delicacies</button>
+            <button class="menu-tab" data-cat="local">🍲 Local Dishes</button>
+            <button class="menu-tab" data-cat="specials">🍖 Specials</button>
+            <button class="menu-tab" data-cat="drinks">🍹 Drinks</button>
+          </div>
+          <div class="search-wrap">
+            <input id="menuSearch" type="text" placeholder="Search dishes or tags..." />
+            <span class="search-icon">🔍</span>
+          </div>
+        </div>
+
+        <div class="menu-grid" id="menuGrid"><!-- JS populates --></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         LIVE BAND
+         ========================================================= -->
+    <section id="events" class="events">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow gold">Entertainment Calendar</span>
+          <h2 class="section-title">Live Band Nights &amp; Vibe Sessions</h2>
+          <div class="gold-line"></div>
+          <p class="section-desc-center">Dining at OBIRI is a multi-sensory experience. Unwind with premium talent, smooth acoustics, and electric sax sessions every week.</p>
+        </div>
+
+        <div class="event-day-tabs" id="eventDayTabs">
+          <button class="event-day-tab active" data-event="fri">Friday Highlife</button>
+          <button class="event-day-tab" data-event="sat">Saturday Vibe</button>
+          <button class="event-day-tab" data-event="sun">Sunday Sunset</button>
+        </div>
+
+        <div class="event-grid">
+          <div class="event-card" id="eventCard"><!-- JS populates --></div>
+
+          <div class="event-form-card">
+            <h4>Make it Special</h4>
+            <p>Request a specific song for the band or organize a private birthday hangout in our lounge.</p>
+
+            <div class="event-type-switch">
+              <button class="ev-switch active" data-type="song">🎵 Song Request</button>
+              <button class="ev-switch" data-type="birthday">🎉 Birthday / Hangout</button>
+            </div>
+
+            <form id="eventForm" class="event-form">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="name" required placeholder="e.g. Amara" />
+              </div>
+
+              <div id="songFields">
+                <div class="form-group">
+                  <label>Song Title</label>
+                  <input type="text" name="song" placeholder="e.g. Sweet Mother" />
+                </div>
+                <div class="form-group">
+                  <label>Artist Name (Optional)</label>
+                  <input type="text" name="artist" placeholder="e.g. Prince Nico Mbarga" />
+                </div>
+              </div>
+
+              <div id="birthdayFields" style="display:none;">
+                <div class="form-group">
+                  <label>📅 Event Date</label>
+                  <input type="date" name="eventDate" />
+                </div>
+                <div class="form-group">
+                  <label>👥 Guest Count</label>
+                  <select name="partySize">
+                    <option value="5-10">5 - 10 Persons</option>
+                    <option value="10-20">10 - 20 Persons</option>
+                    <option value="20-30">20 - 30 Persons</option>
+                    <option value="30+">30+ Persons</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="submit" class="btn btn-gold btn-block">📤 Send Request via WhatsApp</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         RESERVATION
+         ========================================================= -->
+    <section id="reserve" class="reserve">
+      <div class="container reserve-grid">
+        <div class="reserve-text">
+          <span class="eyebrow gold">Reserve a Table</span>
+          <h2 class="section-title">Secure Your Spot <br><span class="gold">At the Best Lounge</span></h2>
+          <p>Planning a date, music night out, birthday dinner, or social meetup? Secure your table easily. Choose your seating style and customize your request.</p>
+
+          <label class="form-label">Select Seating Zone</label>
+          <div class="zone-grid" id="zoneGrid">
+            <button type="button" class="zone-btn active" data-zone="indoor">
+              <span>Cozy Indoor Lounge</span><small>Velvet sofas, elegant details</small>
+            </button>
+            <button type="button" class="zone-btn" data-zone="outdoor">
+              <span>Outdoor Garden</span><small>Breezy terrace, green aesthetics</small>
+            </button>
+            <button type="button" class="zone-btn" data-zone="vip">
+              <span>VIP Lounge Area</span><small>Exclusive booth, premium liquors</small>
+            </button>
+            <button type="button" class="zone-btn" data-zone="live-band-front">
+              <span>Band Front Row</span><small>Closest to sax &amp; acoustics</small>
+            </button>
+          </div>
+
+          <ul class="tip-list">
+            <li>Reserved tables are held for a grace period of 15 minutes.</li>
+            <li>Private lounge sections require advance verification.</li>
+          </ul>
+        </div>
+
+        <div class="reserve-form-card">
+          <form id="reservationForm" class="reservation-form">
+            <input type="hidden" name="zone" id="zoneInput" value="indoor">
+
+            <div class="form-row">
+              <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="name" required placeholder="e.g. Kelechi Okafor" />
+              </div>
+              <div class="form-group">
+                <label>Phone Number</label>
+                <input type="tel" name="phone" required placeholder="e.g. 0803 123 4567" />
+              </div>
+              <div class="form-group">
+                <label>📅 Booking Date</label>
+                <input type="date" name="date" required />
+              </div>
+              <div class="form-group">
+                <label>🕒 Preferred Time</label>
+                <input type="time" name="time" required value="19:00" />
+              </div>
+              <div class="form-group">
+                <label>👥 Number of Guests</label>
+                <select name="guests" required>
+                  <option value="1">1 Person</option>
+                  <option value="2" selected>2 People</option>
+                  <option value="3">3 People</option>
+                  <option value="4">4 People</option>
+                  <option value="5">5 People</option>
+                  <option value="6">6 People</option>
+                  <option value="8">8 People</option>
+                  <option value="10">10 People</option>
+                  <option value="12">12 People</option>
+                  <option value="15">15 People</option>
+                  <option value="20">20+ People</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>✨ Special Occasion</label>
+                <select name="occasion">
+                  <option value="">None / Casual Night Out</option>
+                  <option value="Birthday">Birthday Celebration</option>
+                  <option value="Anniversary">Anniversary</option>
+                  <option value="Date Night">Romantic Date Night</option>
+                  <option value="Business Dinner">Business / Network Dinner</option>
+                  <option value="Hangout">Friend Group Hangout</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Special Notes / Dietary Requirements (Optional)</label>
+              <textarea name="notes" rows="3" placeholder="e.g. Near the live band stage, stroller access, cake delivery service..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-gold btn-block btn-lg">Submit Reservation Details</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         REVIEWS
+         ========================================================= -->
+    <section id="reviews" class="reviews">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow gold">Customer Voice</span>
+          <h2 class="section-title">Guest Testimonials &amp; Reviews</h2>
+          <div class="gold-line"></div>
+          <p class="section-desc-center">Read real feedback from our Google reviews, or write your own below. We take all feedback to heart.</p>
+        </div>
+
+        <div class="reviews-summary">
+          <div class="rs-avg">
+            <p class="rs-big" id="avgRating">4.1<span>/ 5.0</span></p>
+            <p class="rs-stars" id="avgStars">★★★★☆</p>
+            <p class="rs-count" id="reviewCount">Based on 139 guest reviews</p>
+            <button id="writeReviewBtn" class="btn btn-gold btn-block">Write a Review</button>
+          </div>
+
+          <div class="rs-bars">
+            <div class="rs-bar"><span>5 Star</span><div class="rs-bar-track"><div style="width:68%"></div></div><span>68%</span></div>
+            <div class="rs-bar"><span>4 Star</span><div class="rs-bar-track"><div style="width:18%"></div></div><span>18%</span></div>
+            <div class="rs-bar"><span>3 Star</span><div class="rs-bar-track"><div style="width:8%"></div></div><span>8%</span></div>
+            <div class="rs-bar"><span>2 Star</span><div class="rs-bar-track"><div style="width:4%"></div></div><span>4%</span></div>
+            <div class="rs-bar"><span>1 Star</span><div class="rs-bar-track"><div style="width:2%"></div></div><span>2%</span></div>
+          </div>
+
+          <div class="rs-verify">
+            <p class="rs-verify-title">🛡️ Verified Guests</p>
+            <p>We verify reviews to ensure they correspond to real lounge visits. We use critical feedback to improve service times.</p>
+          </div>
+        </div>
+
+        <!-- Write Review Form -->
+        <div class="review-form-wrap" id="reviewFormWrap" style="display:none;">
+          <h3>Submit Your Review</h3>
+          <form id="reviewForm">
+            <div class="form-row">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="author" required placeholder="e.g. Amara" />
+              </div>
+              <div class="form-group">
+                <label>Star Rating</label>
+                <div class="star-picker" id="starPicker">
+                  <span class="star active" data-val="1">★</span>
+                  <span class="star active" data-val="2">★</span>
+                  <span class="star active" data-val="3">★</span>
+                  <span class="star active" data-val="4">★</span>
+                  <span class="star active" data-val="5">★</span>
+                </div>
+                <input type="hidden" name="rating" id="ratingInput" value="5" />
+              </div>
+              <div class="form-group">
+                <label>Review Topic</label>
+                <select name="category">
+                  <option>Food</option><option>Drinks</option><option>Vibe</option><option>Live Band</option><option>Service</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Review Description</label>
+              <textarea name="text" rows="4" required placeholder="Tell us about your meal, the music, or the lounge experience..."></textarea>
+            </div>
+            <div class="form-actions">
+              <button type="button" id="cancelReview" class="btn btn-ghost">Cancel</button>
+              <button type="submit" class="btn btn-gold">Submit Review</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="reviews-grid" id="reviewsGrid"><!-- JS --></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         GALLERY
+         ========================================================= -->
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow gold">Vibe Showcase</span>
+          <h2 class="section-title">Our Lounge &amp; Dining Gallery</h2>
+          <div class="gold-line"></div>
+          <p class="section-desc-center">A glimpse of the OBIRI atmosphere — from sizzling food plates to cozy candlelit seating and highlife performances.</p>
+        </div>
+
+        <div class="gallery-tabs" id="galleryTabs">
+          <button class="gal-tab active" data-cat="All">All</button>
+          <button class="gal-tab" data-cat="Food">Food</button>
+          <button class="gal-tab" data-cat="Drinks">Drinks</button>
+          <button class="gal-tab" data-cat="Vibe">Vibe</button>
+          <button class="gal-tab" data-cat="Events">Events</button>
+        </div>
+
+        <div class="gallery-grid" id="galleryGrid"><!-- JS --></div>
+      </div>
+
+      <!-- Lightbox -->
+      <div class="lightbox" id="lightbox" style="display:none;">
+        <button class="lb-close" id="lbClose">✕</button>
+        <button class="lb-nav lb-prev" id="lbPrev">‹</button>
+        <button class="lb-nav lb-next" id="lbNext">›</button>
+        <div class="lb-content">
+          <img id="lbImage" src="" alt="" />
+          <div class="lb-caption">
+            <p class="lb-cat" id="lbCat"></p>
+            <p class="lb-title" id="lbTitle"></p>
+            <p class="lb-counter" id="lbCounter"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         INSTAGRAM
+         ========================================================= -->
+    <section class="instagram">
+      <div class="container">
+        <div class="ig-head">
+          <div>
+            <p class="ig-eyebrow">📷 ON INSTAGRAM</p>
+            <h3>Follow Our Journey @obiri_restaurant_lounge</h3>
+          </div>
+          <a href="https://www.instagram.com/obiri_restaurant_lounge" target="_blank" rel="noopener" class="btn btn-outline">📷 Follow on Instagram</a>
+        </div>
+        <div class="ig-grid" id="igGrid"><!-- JS --></div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         CONTACT
+         ========================================================= -->
+    <section id="contact" class="contact">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow gold">Get In Touch</span>
+          <h2 class="section-title">Contact &amp; Directions</h2>
+          <div class="gold-line"></div>
+          <p class="section-desc-center">Questions about events, venue bookings, menus or reservations? Drop us a line or visit us at New GRA.</p>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-info">
+            <div class="ci-item">
+              <div class="ci-icon">📍</div>
+              <div><p class="ci-label">Our Location</p><p class="ci-val">111 Woji Road, New GRA,<br>Port Harcourt, Rivers State</p></div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon">📞</div>
+              <div>
+                <p class="ci-label">Call Booking Line</p>
+                <a href="tel:+2349033173219" class="ci-val gold">+234 903 317 3219</a>
+                <p class="ci-mini">Click phone number to call</p>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon">📷</div>
+              <div>
+                <p class="ci-label">Instagram</p>
+                <a href="https://www.instagram.com/obiri_restaurant_lounge" target="_blank" rel="noopener" class="ci-val">@obiri_restaurant_lounge</a>
+              </div>
+            </div>
+            <div class="ci-item">
+              <div class="ci-icon">🕒</div>
+              <div><p class="ci-label">Operating Hours</p><p class="ci-val">12:00 PM – Late (Daily)</p><p class="ci-mini">Kitchen orders close 1 hour before lockup</p></div>
+            </div>
+
+            <a href="tel:+2349033173219" class="btn btn-outline btn-block">📞 Call Restaurant Direct</a>
+          </div>
+
+          <div class="contact-form-wrap">
+            <h3>Send an Inquiry</h3>
+            <p class="cf-desc">Fill out the quick form to chat directly with our lounge managers on WhatsApp.</p>
+
+            <form id="contactForm">
+              <div class="form-group">
+                <label>Your Name</label>
+                <input type="text" name="name" required placeholder="Enter your name" />
+              </div>
+              <div class="form-group">
+                <label>Phone Number (Optional)</label>
+                <input type="tel" name="phone" placeholder="e.g. 0803 123 4567" />
+              </div>
+              <div class="form-group">
+                <label>Inquiry Message</label>
+                <textarea name="message" rows="4" required placeholder="Type your questions or birthday booking inquiries..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-whatsapp btn-block">💬 Submit to WhatsApp</button>
+            </form>
+          </div>
+
+          <div class="contact-map-wrap">
+            <iframe
+              title="OBIRI Location Map"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3975.766324316937!2d7.011883314763134!3d4.810243496507044!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1m1s0x1069cef40af85203%3A0xe54d6be1a80d5dd7!2sWoji%20Rd%2C%20New%20GRA%2C%20Port%20Harcourt%2C%20Rivers!5e0!3m2!1sen!2sng!4v1655021234567!5m2!1sen!2sng"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              allowfullscreen></iframe>
+            <div class="map-tip">
+              <p class="map-tip-title">GRA Navigation Tip</p>
+              <p>We are on Woji Road, next to major upscale hotels. Ample secure parking with 24/7 guards is available on-site.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         FOOTER
+         ========================================================= -->
+    <footer class="footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="logo">
+            <span class="logo-main">OBIRI</span>
+            <span class="logo-sub">RESTAURANT &amp; LOUNGE</span>
+          </a>
+          <p>Port Harcourt's premier luxury spot merging fine dining, rich Nigerian flavours, and live highlife melodies under a premium dark luxury vibe.</p>
+          <div class="footer-tags">
+            <span class="footer-tag">★ 4.1 Rating</span>
+            <span class="footer-tag-mini">139+ Google Reviews</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#events">Live Events</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contact Details</h4>
+          <ul>
+            <li>📍 111 Woji Road, New GRA, Port Harcourt</li>
+            <li>📞 <a href="tel:+2349033173219">+234 903 317 3219</a></li>
+            <li>📷 <a href="https://www.instagram.com/obiri_restaurant_lounge" target="_blank" rel="noopener">@obiri_restaurant_lounge</a></li>
+            <li>Dine-In • Drive-Thru • Delivery</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <ul>
+            <li>🕒 Mon - Sun</li>
+            <li>12:00 PM – Late Night</li>
+          </ul>
+          <a href="#reserve" class="btn btn-gold btn-block btn-small">Reserve a Table</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© <span id="year"></span> OBIRI Restaurant &amp; Lounge. All rights reserved.</p>
+        <a href="https://wa.me/2349033173219" target="_blank" rel="noopener" class="footer-wa">💬 WhatsApp Admin</a>
+      </div>
+    </footer>
+
+    <!-- Floating Order Button -->
+    <a href="#menu" class="float-order" id="floatOrder">
+      🛒 <span>Order Now</span>
+      <span class="float-count" id="floatCount" style="display:none;">0</span>
+    </a>
+
+    <!-- =========================================================
+         CART DRAWER
+         ========================================================= -->
+    <div class="cart-backdrop" id="cartBackdrop"></div>
+    <aside class="cart-drawer" id="cartDrawer">
+      <div class="cart-head">
+        <h2>🛒 YOUR ORDER</h2>
+        <button class="icon-btn" id="closeCart" aria-label="Close cart">✕</button>
+      </div>
+
+      <div class="cart-body" id="cartBody">
+        <!-- JS populates -->
+      </div>
+
+      <div class="cart-foot" id="cartFoot" style="display:none;">
+        <div class="cart-row"><span>Subtotal</span><span id="cartSubtotal">₦0</span></div>
+        <div class="cart-row" id="deliveryRow" style="display:none;"><span>Delivery Fee</span><span>₦2,500</span></div>
+        <div class="cart-row cart-total"><span>Grand Total</span><span id="cartGrandTotal" class="gold">₦0</span></div>
+      </div>
+    </aside>
+
+    <!-- Success Toast/Modal -->
+    <div class="toast" id="toast" style="display:none;"></div>
+
+    <!-- Reservation Success Modal -->
+    <div class="modal-backdrop" id="resModal" style="display:none;">
+      <div class="modal-card">
+        <div class="modal-success-icon">✓</div>
+        <h3>Table Booking Confirmed!</h3>
+        <p class="modal-desc">Your reservation at OBIRI has been successfully registered. Here are your details:</p>
+        <div class="modal-details" id="resDetails"></div>
+        <p class="modal-tip">Highly Recommended: Send these details to our WhatsApp line to lock in your table immediately.</p>
+        <div class="modal-actions">
+          <button id="resWaBtn" class="btn btn-whatsapp">💬 Confirm on WhatsApp</button>
+          <button id="resCloseBtn" class="btn btn-ghost">Done</button>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>
