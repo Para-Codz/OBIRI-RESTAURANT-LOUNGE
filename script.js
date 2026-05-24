@@ -7,8 +7,8 @@
 // ============================================================
 // CONFIG — Official OBIRI WhatsApp number
 // ============================================================
-const OBIRI_WHATSAPP = "2349033173219";    // For wa.me links (no plus, no spaces)
-const OBIRI_PHONE_DISPLAY = "+234 903 317 3219";
+const OBIRI_WHATSAPP = "+2349040429332";    // For wa.me links (no plus, no spaces)
+const OBIRI_PHONE_DISPLAY = "+234 904 042 9332";
 
 // Universal helper: opens WhatsApp with the prefilled message in a new tab
 function sendToWhatsApp(message) {
